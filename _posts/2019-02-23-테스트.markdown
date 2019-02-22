@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "테스트"
+subtitle:   "팁에다 썼음"
+categories: tip
+tags: tip
+---
+
+
+
+홀롤롤롤ㄹ
+
