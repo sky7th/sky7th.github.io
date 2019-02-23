@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               적어라.
+title:               ㅇㅅㅇ
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -18,7 +18,7 @@ tagline:             내일의 나는 분명히 까먹는다
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  내일의 내가 오늘을 후회하지 않도록.
+  내일이 됐을 때 오늘을 후회하지 않도록 :)
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
