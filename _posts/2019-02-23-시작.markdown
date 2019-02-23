@@ -2,8 +2,8 @@
 layout: post
 title:  "나는 금붕어"
 subtitle:   "ㅠㅡㅜ"
-categories: algo
-tags: algorithm
+categories: essay
+tags: essay
 ---
 
 ---------
