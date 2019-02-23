@@ -8,7 +8,7 @@ sky7th:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    내일의 내가 오늘을 후회하지 않게.
+    내일의 내가 오늘을 후회하지 않도록.
 
   # This photo will be used in the about section
   picture:
