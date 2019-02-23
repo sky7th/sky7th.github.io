@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "[189~] 쿼드 트리 뒤집기 부터"
+subtitle:   "구종만"
+categories: book
+tags: jongman
+---
+
+## 7.2 문제: 쿼드 트리 뒤집기 (하)
+
+쿼드 트리로 압축된 흑백 그림을 상하로 뒤집어서 압축 후 출력하기
+
+> 생각의 전환이 놀라웠음
+
+```cpp
+string reverse(string::iterator& it) {
+char head = *(it++);
+if(head == 'b' || head == 'w')
+    return string(1, head);
+string upperLeft = reverse(it);
+string upperRight = reverse(it);
+string lowerLeft = reverse(it);
+string lowerRight = reverse(it);
+return string("x") + lowerLeft + lowerRight + upperLeft + upperRight;
+} 
+```
+
+> ㄷㄷ...
+
+## 7.4 문제: 울타리 잘라내기 (중)
+
+길이가 다른 나무 판자들 세워놓고 가장 큰 직사각형 구하기
+
+> n^2 방법이 먼저 떠오른다  
+> 갈 길이 멀어따..
+
+```cpp
+vector<int> h;
+int solve(int left, int right) {
+    if(left == right) return h[left];
+    int mid = (left + right) / 2;
+    int ret = max(solve(left, mid), solve(mid+1, right));
+    int lo = mid, hi = mid+1;
+    int height = min(h[lo], h[hi]);
+    ret = max(ret, height * 2);
+    while(left < lo || hi < right) {
+        if(hi < right && (lo == left || h[lo-1] < h[hi+1])) {
+            ++hi;
+            height = min(height, h[hi]);
+        }
+        else {
+            --lo;
+            height = min(height, h[lo]);
+        }
+        ret = max(ret, (hi - lo + 1) * height);
+    }
+    return ret;
+}
+```
+
+> 방법은 비스무리하게 생각했으나 구현에 자신이 없었다.  
+> 막상 풀이를 보면 증말 별거 아닌데 구현할 때는 내가 쓴 코드에 확신도 없고 자신도 없다 ..ㅠㅡㅜ  
+> 많이 풀어보고 익숙해지는게 중요한 듯 싶다.

@@ -6,8 +6,9 @@ categories: make
 tags: omok
 ---
 
----
-## 소켓 프로그래밍
+    
+소켓 프로그래밍
+-----
 - 두 개의 컴퓨터 통신 -> 각 컴퓨터 소켓 이용
 - TCP, UDP 로 나뉨
 
@@ -35,7 +36,7 @@ tags: omok
 - 1025 번 이상 선택
 - 연결 수립 -> 클라 컴퓨터 사용 중이지 않은 임의의 포트 할당
 
-<br><br><br><br>
+<br><br><br>
 
 ### socket(네퉠 주소 체계, 소켓 타입, 프로토콜)
 >소켓 생성  
@@ -53,6 +54,8 @@ tags: omok
                 : 소켓 주소 체계 (sin_family)
                 : 포트 (sin_port)
                 : IPv4 주소 (sin_addr)  
+
+
 > 실제로 사용 할땐 SOCKADDR_IN (IPv4) -> SOCKADDR (일반)  
 
 ### listen(소켓 변수, 백 로그 큐의 크기)
@@ -88,9 +91,9 @@ tags: omok
 > 열린 소켓 close
 
 -----
-<br><br><br><br>
-Winsock2 
---- 
+<br><br><br>
+Winsock2
+-----
 >위 함수들을 리눅스에서는 사용 가능  
 >but, 윈도우에서는 안되기에 라이브러리로 사용 가능하게 만듬
 

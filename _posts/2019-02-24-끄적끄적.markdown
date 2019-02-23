@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "아이고리즘 Tip 정리 ㅋ"
+subtitle:   "그냥 ㅋ"
+categories: tip
+tags: tip
+---
+
+> l 부터 r 까지 -> r - l + 1
+
+> 기저 사례 먼저 처리 (입력 오류, 범위 초과)
