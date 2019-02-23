@@ -2,7 +2,7 @@
 layout: tag-blog
 title: JavaScript
 slug: javascript
-category: devlog
+category: dev
 menu: false
 order: 1
 ---

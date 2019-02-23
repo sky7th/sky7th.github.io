@@ -1,6 +1,6 @@
 ---
 layout: list
-title: 일기
+title: Essay
 slug: essay
 menu: true
 submenu: false

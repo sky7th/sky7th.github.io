@@ -3,7 +3,7 @@ layout: post
 title:  "알고리즘 문제해결전략"
 subtitle:   "ㅁㄴㅇㄹ"
 categories: book
-tags: 알문
+tags: alp
 ---
 
 
