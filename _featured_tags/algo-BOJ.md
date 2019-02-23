@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: React
-slug: react
-category: video
+title: BOJ
+slug: boj
+category: algo
 menu: false
 order: 1
 ---

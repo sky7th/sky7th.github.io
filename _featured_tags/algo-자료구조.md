@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Book
-slug: book
-category: review
+title: 자료구조
+slug: ds
+category: algo
 menu: false
 order: 1
 ---

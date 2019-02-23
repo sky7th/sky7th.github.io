@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Algorithm
+title: 알고리즘
 slug: algorithm
-category: devlog
+category: algo
 menu: false
-order: 4
+order: 1
 ---

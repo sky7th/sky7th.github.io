@@ -6,5 +6,5 @@ menu: true
 submenu: false
 order: 4
 description: >
-  여러 팁들을 공유합니다.
+  짜잘한 정보는 요기에 정리.
 ---

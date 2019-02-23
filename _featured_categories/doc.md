@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Documents
-slug: doc
+title: 공부
+slug: study
 menu: true
 submenu: true
 order: 7

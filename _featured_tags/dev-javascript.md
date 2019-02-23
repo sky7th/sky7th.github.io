@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Data
-slug: data
+title: JavaScript
+slug: javascript
 category: devlog
 menu: false
-order: 2
+order: 1
 ---
