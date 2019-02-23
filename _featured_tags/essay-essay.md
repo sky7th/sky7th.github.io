@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: essay
+title: 일기
 slug: essay
 category: essay
 menu: false

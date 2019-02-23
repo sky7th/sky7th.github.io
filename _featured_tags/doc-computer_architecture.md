@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
 title: 컴퓨터 구조
-slug: computer architecture
+slug: ca
 category: doc
 menu: false
 order: 1
