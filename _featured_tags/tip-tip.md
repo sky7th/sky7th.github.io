@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Tip
-slug: tip
+title: C++
+slug: c++
 category: tip
-menu: false
+menu: true
 order: 1
 ---

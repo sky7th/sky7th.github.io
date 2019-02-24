@@ -91,7 +91,11 @@ tags: omok
 > 열린 소켓 close
 
 -----
-<br><br><br>
+
+
+<br><br>
+
+
 Winsock2
 -----
 >위 함수들을 리눅스에서는 사용 가능  

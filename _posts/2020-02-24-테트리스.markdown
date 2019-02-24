@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "[Tetris] 기초부터"
+subtitle:   "ㅠㅡㅜ"
+categories: make
+tags: tetris
+---
+
+HANDLE
+
+CreateConsoleScreenBuffer
+
+DWORD
