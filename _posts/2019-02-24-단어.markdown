@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "단어"
+subtitle:   "필쑤"
+categories: eng
+tags: word
+---
+
+consistent 일관된  
+overall 전체의
+represent 말하다, 표현하다  
+assume 가정하다, 취하다

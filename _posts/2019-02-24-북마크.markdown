@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "잘 정리해 놓은"
+subtitle:   "ㅠㅡㅜ"
+categories: tip
+tags: extra
+---
+
+### [Windows API] 기본자료형  
+> https://m.blog.naver.com/PostView.nhn?blogId=jed00&logNo=140185568328&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+### 콘솔 함수 정리  
+> https://m.blog.naver.com/PostView.nhn?blogId=0421cjy&logNo=110186520563&proxyReferer=https%3A%2F%2Fwww.google.com%2F

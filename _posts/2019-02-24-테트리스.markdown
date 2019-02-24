@@ -6,8 +6,14 @@ categories: make
 tags: tetris
 ---
 
-HANDLE
+### HANDLE  
+>단순히 포인터다  
+>but, 그 값이 주소가 아님. os 내부적으로 결정된 **정수값** 으로 이해.
 
-CreateConsoleScreenBuffer
+### CreateConsoleScreenBuffer
 
-DWORD
+>콘솔 화면 버퍼를 만듬
+
+### DWORD  
+> byte, word, dword, qword
+
