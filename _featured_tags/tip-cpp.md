@@ -3,6 +3,6 @@ layout: tag-blog
 title: C++
 slug: c++
 category: tip
-menu: true
+menu: false
 order: 1
 ---
