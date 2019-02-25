@@ -63,3 +63,22 @@ int solve(int left, int right) {
 > 많이 풀어보고 익숙해지는게 중요한 듯 싶다.
 
 
+## 7.7 풀이: 팬미팅  
+남성 팬과는 악수, 모든 멤버가 팬과 포옹하는 횟수.  
+카라츠바 알고리즘을 활용
+
+```cpp
+int hugs(const string& members, const string& fans) {
+    int N = member.size(), M = fans.size();
+    vector<int> A(N), B(M);
+    for(int i = 0; i < N; ++i) A[i] = (member[i] == 'M');
+    for(int i = 0; i < M; ++i) B[M-i-1] = (fans[i] == 'M');
+    vector<int> C = karatsuba(A, B);
+    int allHugs = 0;
+    for(int i = N-1; i < M; ++i)
+        if(C[i] == 0)
+            ++allHugs;
+    return allHugs;
+}
+```
+
