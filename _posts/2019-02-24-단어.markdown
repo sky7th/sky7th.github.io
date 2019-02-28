@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "단어"
-subtitle:   "필쑤"
+title:  "[영어] 단어"
+subtitle:   "[영어] 단어"
 categories: eng
 tags: word
 ---

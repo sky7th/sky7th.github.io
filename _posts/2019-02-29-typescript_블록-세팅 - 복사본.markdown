@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[TypeScript] 세팅"
-subtitle:   "lllll"
+subtitle:   "[TypeScript] 세팅"
 categories: dev
 tags: typescript
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "유용한 사이트 정리"
-subtitle:   "ㅎ"
+title:  "[Tip] 유용한 사이트 정리"
+subtitle:   "[Tip] 유용한 사이트 정리"
 categories: tip
 tags: bookmark
 ---

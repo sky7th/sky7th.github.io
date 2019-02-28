@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Tetris] 기초부터"
-subtitle:   "ㅠㅡㅜ"
+subtitle:   "[Tetris] 기초부터"
 categories: make
 tags: tetris
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "07. 분할 정복"
-subtitle:   "구종만"
+subtitle:   "07. 분할 정복"
 categories: book
 tags: jongman
 ---

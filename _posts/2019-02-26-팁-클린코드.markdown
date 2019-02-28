@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "클린 코드"
-subtitle:   "클린 코드"
+title:  "[Tip] 클린 코드"
+subtitle:   "[Tip] 클린 코드"
 categories: tip
 tags: extra
 ---

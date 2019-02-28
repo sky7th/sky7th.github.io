@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[React] 란?"
-subtitle:   "정리"
+subtitle:   "[React] 란?"
 categories: dev
 tags: react
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "나는 금붕어"
-subtitle:   "ㅠㅡㅜ"
+subtitle:   "나는 금붕어"
 categories: essay
 tags: essay
 ---

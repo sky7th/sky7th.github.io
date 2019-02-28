@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[C++] static_cast, 업 캐스팅, 다운 캐스팅"
-subtitle:   "ㅠㅡㅜ"
+subtitle:   "[C++] static_cast, 업 캐스팅, 다운 캐스팅"
 categories: tip
 tags: c++
 ---

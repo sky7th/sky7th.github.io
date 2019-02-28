@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Tip] 자꾸 까먹는 것들"
-subtitle:   "ㅠㅡㅜ"
+subtitle:   "[Tip] 자꾸 까먹는 것들"
 categories: tip
 tags: extra
 ---

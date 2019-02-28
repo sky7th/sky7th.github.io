@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[React] 리액트 기본"
-subtitle:   "정리"
+subtitle:   "[React] 리액트 기본"
 categories: dev
 tags: react
 ---

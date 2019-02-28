@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "알고리즘 Tip 정리 ㅋ"
-subtitle:   "그냥 ㅋ"
+title:  "[Tip] 알고리즘 팁 정리"
+subtitle:   "[Tip] 알고리즘 팁 정리"
 categories: tip
 tags: tip
 ---

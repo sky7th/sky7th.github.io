@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[TypeScript] 간단한 블록체인"
-subtitle:   "lllll"
+subtitle:   "[TypeScript] 간단한 블록체인"
 categories: dev
 tags: typescript
 ---

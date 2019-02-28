@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "잘 정리해 놓은"
-subtitle:   "ㅠㅡㅜ"
+title:  "[Tip] 잘 정리해 놓은 사이트"
+subtitle:   "[Tip] 잘 정리해 놓은 사이트"
 categories: tip
 tags: extra
 ---
