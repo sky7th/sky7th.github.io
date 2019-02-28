@@ -1,0 +1,101 @@
+---
+layout: post
+title:  "[React] 리액트 기본"
+subtitle:   "정리"
+categories: dev
+tags: javascript
+---
+
+### 정석  
+
+```js
+//HTML
+<div id="root"><div/>
+
+// js
+class FirstReact extends React.Component {
+  render() {
+    return (
+      <h1>Hi! React~!</h1> // JSX
+    )
+  }
+}
+
+ReactDOM.render(<FirstReact/>, document.getElementById('root'));
+```
+
+### 함수형
+```js
+// js
+function FirstReact() {
+  return "Hi! React~!;
+}
+```
+
+### props  
+```js
+function KaKaoFriends(props) {
+  return (
+    <h3>
+      Name is {props.name}. Age is {props.age}  
+    </h3>
+  );
+}
+// 
+Ryan.defaultProps = {
+  name: '카카오 프렌즈',
+  age: '?'
+}
+
+const ryan = {
+  name: '라이언',
+  age: '3'
+}
+
+ReactDOM.render(
+  <KaKaoFriends 
+  name={ryan.name}, 
+  age={ryan.age}/>, 
+  document.getElementById('root'));
+```
+
+### State   
+```js
+class Clock(props) extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date()
+    };
+  }
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+  componentDidMount() {
+    this.timerID = setInterval(() => this.tick(), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+  render() {
+    return (
+      <h3>
+        현재 시간은 [{this.state.date.toLocalTimeString()}] 입니다.
+      </h3>
+    );
+  }
+}
+
+ReactDOM.render(<Clock/>, document.getElementById('rood'));
+```
+<br>
+
+
+return 안에 2개 이상 문법이 들어가면 `<div></div>` 로 묶어줌  
+<br>
+함수를 사용할 때는 bind() 처리를 꼭 해줌
+```js
+<button onClick={this.goBack.bind(this)}> 뒤로가기 </button>
+```

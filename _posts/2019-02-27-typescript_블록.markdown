@@ -18,39 +18,50 @@ javascript 는 사용하기 쉽고, 엄격한 규칙도 없고, 원하는 방향
 
 - 예측 가능한 언어, 읽기 쉬운 코드
 
-### 프로젝트 진행  
+### 왜 TypeScript 일까?
 
-    yarn init
-    yarn global add typescript
-
-#### tsconfig.json 파일 생성
-
-TypeScript 한테 어떻게 JavaScript 로 변환하는지 알려주고 몇몇 옵션을 줌
-
-tsconfig.json 세팅 :
+> Typed 언어, 어떤 종류의 변수와 데이터인지 설정해줘야 함
 
 ```js
-{
-    "compilerOptions": {
-        "module": "commonjs", // node.js 를 평범하게 사용
-        "target": "ES2015" // 어떤 버전의 js으로 컴파일 할지 정함
-        "sourceMap": true // sourceMap은 원본소스와 변환된 소스를 맵핑해 주는 방법을 제안한 것
-    },
-    "include": ["index.ts"],
-    "exclude": ["node_modules"]
-}
+const introduceMyself = (name, age, gender?) => {
+    console.log('My name is ${name}, I am ${age}, I am ${gender});
+};
+introduceMyself(name, age); // gender 에 ? 를 없애면 오류가 생김
+
+export {};  // 이 파일은 모듈임을 알려줌
 ```
 
-    tsc
+#### name: string, age: number, ...
 
-index.ts -> index.js 과 index.js.map 를 만듬
+> 변수 타입을 적어줌
 
-#### pakage.json 스크립트 추가
+### interface
 
-```js
-"script": {
-    "start": "node index.js", // node 폴더에 index.js 파일
-    "prestart": "tsc" // yarn start 전에 tsc 먼저 시행
+> 객체 변수(매개 변수) 에 타입을 뭉터기로 정해줌  
+> js 로 컴파일 되지 않음
+
+### class
+
+```typescript
+class Human {
+    public name: string;
+    private age: number;
+    public gender: string;
+    constructor(name: string, age: number, gender: string) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
 }
+
+const taehwa = new human("TaeHwa", 25, "male"); // 25 에서 오류남
 ```
+
+### import
+
+    import * as Something from "something-pakage";
+
+### static
+
+> 클래스 안에 static 으로 선언한 함수는 객체 인스턴스를 생성하지 않아도 사용이 가능함
 
