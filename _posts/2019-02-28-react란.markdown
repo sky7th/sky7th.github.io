@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[React] 리액트란?"
+title:  "[React] 란?"
 subtitle:   "정리"
 categories: dev
-tags: javascript
+tags: react
 ---
 
 ### React 란?  

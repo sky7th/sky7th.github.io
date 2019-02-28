@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "TypeScript"
+title:  "[TypeScript] 란?"
 subtitle:   "lllll"
 categories: dev
 tags: typescript
