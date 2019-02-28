@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[JavaScript] 정리"
-subtitle:   "정리"
+subtitle:   "정리1"
 categories: dev
 tags: javascript
 ---
