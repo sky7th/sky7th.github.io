@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "07. 분할 정복"
-subtitle:   "07. 분할 정복"
+title:  "[알고리즘 문제 해결 전략] 07. 분할 정복"
+subtitle:   "[알고리즘 문제 해결 전략] 07. 분할 정복"
 categories: book
 tags: jongman
 ---
