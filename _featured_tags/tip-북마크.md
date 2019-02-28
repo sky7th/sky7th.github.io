@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: 깨알
+title: 북마크
 slug: bookmark
 category: tip
 menu: false

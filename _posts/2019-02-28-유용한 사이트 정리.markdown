@@ -3,7 +3,7 @@ layout: post
 title:  "유용한 사이트 정리"
 subtitle:   "ㅎ"
 categories: tip
-tags: tip
+tags: bookmark
 ---
 
 ### Codepen  
