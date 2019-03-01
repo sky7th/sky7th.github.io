@@ -32,7 +32,7 @@ function FirstReact() {
 }
 ```
 
-### props  
+## props  
 ```js
 function KaKaoFriends(props) {
   return (
@@ -59,7 +59,7 @@ ReactDOM.render(
   document.getElementById('root'));
 ```
 
-### State   
+## State   
 ```js
 class Clock(props) extends React.Component {
   constructor(props) {
@@ -99,3 +99,52 @@ return 안에 2개 이상 문법이 들어가면 `<div></div>` 로 묶어줌
 ```js
 <button onClick={this.goBack.bind(this)}> 뒤로가기 </button>
 ```
+
+## 마운팅  
+> React 컴포넌트 객체가 DOM에 실제로 삽입되기 전까지의 과정  
+
+#### 초기 상태 
+```js
+contructor()  
+componentWillMount()  
+render()  
+componentDidMount()
+```
+
+API 호출은 componentDidMount() 에서 해야 효과적임
+
+#### 데이터 변경  
+
+```js
+shouldComponentUpdate()
+componentWillUpdate()  
+render()  
+componentDidUpdate()
+```
+
+#### 컴포넌트 해제  
+```js 
+componentWillUnmount()
+```  
+컴포넌트가 마운팅 해제될 때 수행되는 함수  
+컴포넌트의 동작을 위해 사용되었던 메소드들의 리소스를 제거  
+<br> 
+보통, 애플리케이션의 성능 향상을 위해 사용 됨
+
+### API 호출  
+
+#### JSON  
+> 서버와 클라이언트가 데이터를 주고 받을 때 사용할 수 있는 데이터 형식  
+
+#### fetch  
+> 클라이언트 상에서 특정한 서버에 접속하고자 할 때 사용
+
+#### then  
+> 얻은 데이터를 어떤 형식으로 저장할지, 어떻게 사용할지를 정함
+
+```js
+fetch('https://.................../......../.....')
+  .then(reponse => reponse.json())
+  .then(json => console.log(json))
+```
+
