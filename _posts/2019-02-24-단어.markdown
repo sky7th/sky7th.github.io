@@ -14,3 +14,4 @@ opscure 모호한
 validation 확인  
 candidate 후보자  
 valid 유효한  
+progressive 점진적인(등차수열)
