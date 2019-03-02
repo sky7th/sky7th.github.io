@@ -148,3 +148,33 @@ fetch('https://.................../......../.....')
   .then(json => console.log(json))
 ```
 
+## 이벤트 처리  
+```js
+class EventButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isToggleOn: true
+    }
+  }
+  buttonClick() {
+    this.setState(state => ({
+      isToggleOn: !this.state.isToggleOn
+    }))
+  }
+  render() {
+    return (
+      <button onClick={this.buttonClick}>
+        {this.state.isToggleOn ? ON : OFF}
+      </button>
+    )
+  }
+}
+
+ReactDOM.render(<EventButton/>,
+document.getElementById('root'));
+```
+
+```constructor()``` 함수 안에 ```this.buttonClick = this.buttonClick.bind(this);``` 하거나  
+```buttonClick() {...}``` 를 buttonClick = () => {...} 로 바꿔서 bind 처리를 한다.
+

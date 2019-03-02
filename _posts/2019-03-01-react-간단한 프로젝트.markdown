@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "[React] 간단한 고객 관리 시스템"
+subtitle:   "[React] 간단한 고객 관리 시스템"
+categories: dev
+tags: react
+---
+
+#### React 팩 설치  
+```npm install -g create-react-app```
+
+#### yarn 설치  
+```npm install -g yarn```  
+
+#### 프로젝트 생성  
+```create-react-app ProjectTitle```
+
+#### Material-UI  (React 디자인 프레임워크)
+```js
+npm install @material-ui/core
+```
