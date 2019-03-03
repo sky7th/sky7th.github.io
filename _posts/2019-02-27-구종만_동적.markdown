@@ -295,3 +295,20 @@ int climb(int days, int climbed) {
 // 얻은 경우의 수를 2^m 으로 나누면 됨
 ```
 
+## 8.13 풀이: 비대칭 타일링  
+> 위에 타일링 변형 문제
+
+```cpp
+int asymmetric(int width) {
+  if(width % 2 == 1)
+    return (tiling(width) - tiling(width/2) + MOD);
+    int ret = tiling(width);
+    ret = (ret - tiling(width/2) + MOD) % MOD;
+    ret = (ret - tiling(width/2 - 1) + MOD) % MOD;
+    return ret;
+}
+```
+
+MOD를 왜 미리 더해줄까 ??  
+tiling()의 반환 값은 경우의 수 이므로 음수이면 안됨  
+
