@@ -312,3 +312,100 @@ int asymmetric(int width) {
 MOD를 왜 미리 더해줄까 ??  
 tiling()의 반환 값은 경우의 수 이므로 음수이면 안됨  
 
+
+
+#### 스캐폴딩 테스트
+
+
+## 8.14 폴리오미노 (중)
+
+> 정사각형의 변을 서로 완전하게 붙여 만든 도형들을 폴리오미노 라고 부름
+
+```cpp
+const int MOD = 10*1000*1000;
+int cache[101][101];
+int poly(int n, int first) {
+  if(n == first) return 1;
+  int& ret = cache[n][first];
+  if(ret != -1) return ret;
+  ret = 0;
+  for(int second = 1; second <= n-first; ++second) {
+    int add = first + second - 1;
+    add *= poly(n-first, second);
+    add %= MOD;
+    ret += add;
+    ret %= MOD;
+  }
+  return ret;
+}
+```
+
+## 8.16 문제: 두니발 박사의 탈옥 (중)
+
+
+#### 완전 탐색  
+
+```cpp
+int n, d, p, q;
+int connected[51][51], deg[51];
+double search(vector<int>& path) {
+  if(path.size() == d+1) {
+    if(path.back() != q) return 0.0;
+    double ret = 1.0;
+    for(int i = 0; i+1 < path.size; ++i)
+      ret /= deg[path[i]];
+    return ret;
+  }
+  double ret = 0;
+  for(int there = 0; there < n; ++there)
+    if(connected[path.back()][there]) {
+      path.push_back(there);
+      ret += search(path);
+      path.pop_back();
+  }
+  return ret;
+}
+
+```
+
+#### 동적 계획법   
+```cpp
+int n, d, p, q;
+double cache[51][101];
+int connected[51][51], deg[51];
+double search2(int here, int days) {
+  if(days == d) return (here == q ? 1.0 : 0.0);
+  double& ret = cache[here][days];
+  if(ret > -0.5) return ret;
+  ret = 0.0;
+  for(int there = 0; there < n; ++there)
+    if(connected[here][days])
+      ret += search2(there, days+1) / deg[here];
+  return ret;
+}
+```
+
+#### 반대로 생각해보자  
+```cpp
+int n, d, p, q;
+double cache[51][101];
+int connected[51][51], deg[51];
+double search3(int here, int days) {
+  if(days == 0) return (here == p ? 1.0 : 0.0);
+  double& ret = cache[here][days];
+  if(ret > -0.5) return ret;
+  ret = 0.0;
+  for(int there = 0; there < n; ++there)
+    if(connected[here][days])
+      ret += search3(there, days-1) / deg[here];
+  return ret;
+}
+```
+
+#### 이론적 배경: 마르코프 연쇄  
+> - 유한개의 상태가 있다  
+> - 매 시간마다 상태가 변경된다  
+> - 어떤 상태 a에서 다른 상태 b로 옮겨갈 확률은 현재 상태 a에만 좌우됨  
+> - a 이전에 어느 상태에 있었는지, 현재 시간은 얼마인지 등은 영향을 주지 않음
+
+
