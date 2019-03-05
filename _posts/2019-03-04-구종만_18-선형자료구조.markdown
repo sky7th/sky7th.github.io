@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[알고리즘 문제 해결 전략] 09. 동적 계획법 테크닉"
-subtitle:   "[알고리즘 문제 해결 전략] 09. 동적 계획법 테크닉"
+title:  "[알고리즘 문제 해결 전략] 18. 선형 자료 구조"
+subtitle:   "[알고리즘 문제 해결 전략] 18. 선형 자료 구조"
 categories: book
 tags: jongman
 ---

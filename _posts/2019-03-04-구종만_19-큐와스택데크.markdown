@@ -30,3 +30,88 @@ int solveStack() {
   return ret;
 }
 ```
+
+
+## 19.4 문제: 짝이 맞지 않는 괄호 (하)
+
+```cpp
+bool wellMatched(const string& formula) {
+  const string opening("({["), closing(")}]");
+  stack<int> openStack;
+  for(int i = 0; i < formula.size(); ++i) {
+    if(opening.find(formula[i]) != -1)
+      openStack(formula[i]);
+    else {
+      if(openStack.empty()) return false;
+      if(opening.find(openStack.top()) != closing.find(formula[i]))
+        return false;
+    }
+    openStack.pop();
+  }
+  return openStack.empty();
+}
+```
+
+## 19.7 풀이: 외계 신호 분석  
+
+
+#### 오프라인 알고리즘  
+```cpp
+int simple(const vector<int>& signals, int k) {
+  int ret = 0;
+  for(int head = 0; head < signals.size(); ++head) {
+    int sum = 0;
+    for(int tail = head; tail < signals.size(); ++tail) {
+      sum += tail;
+      if(sum == k) ret++;
+      if(sum >= k) break;
+    }
+  }
+  return ret;
+}
+```
+#### 최적화된 알고리즘  
+```cpp
+int optimized(const vector<int>& signals, int k) {
+  int ret = 0, tail = 0, rangeSum = signals[0];
+  for(int head = 0; head < signals.size(); ++head) {
+    while(rangeSum < k && tail-1 < signals.size())
+      rangeSum += signals[++tail];
+      if(rangeSum == k) ret++;
+      rangeSum -= signals[head];
+  }
+  return ret;
+}
+```
+
+#### 온라인 알고리즘  
+```cpp
+struct RNG {
+  unsigned seed;
+  RNG() : seed(1983) {}
+  unsinged next() {
+    unsigned ret = seed;
+    seed = ((seed * 214013u) + 2531011u);
+    return ret % 10000 + 1;
+  }
+};
+
+int countRange(int k, int n) {
+  RNG rng;
+  queue<int> range;
+  int ret = 0, rangeSum = 0;
+  for(int i = 0; i < n; ++i) {
+    int newSignal = rng.next();
+    rangeSum += newSignal;
+    range.push(newSignal);
+
+    while(rangeSum > k) {
+      rangeSum -= range.front();
+      range.pop();
+    }
+    
+    if(rangeSum == k) ret++;
+  }
+  return ret;
+}
+```
