@@ -39,3 +39,70 @@ tags: linux
 
 > sys/ 시스템에 대한 설정들을 두는 곳
 
+
+
+#### mkdir : 디렉토리 생성  
+> 
+#### rmdir : 디렉토리 삭제  
+>
+#### touch : 빈 파일 생성  
+
+#### mv : 이름 바꾸기
+
+#### rm : 삭제  
+    rm -r    rm -ri  
+
+#### cp : 복사  
+
+------
+
+#### 에디터  
+    vi
+    nano
+
+## 유용한 명령들
+
+#### find  
+    find ./ -name *.java  
+    find . -name *.java -size +1c
+
+#### cat : 문서 보기
+
+#### head : 앞에만 보기  
+    head -n2 hello.java
+
+#### grep : 원하는 글자를 파일 내에서 찾음  
+    grep "class " hello.java
+    grep -i "class " hello.java
+
+
+#### cmp : 파일 비교  
+#### diff : 다른 곳 알려줌
+#### file : 어떤 파일인지 힌트 줌
+
+#### history : 내가 실행했던 명령어 확인 (!숫자 로 실행)
+
+#### echo : 단순 출력  
+
+#### > : 기존에 있는 내용 지우고 다시 만듬  
+#### >> : 기존에 있는 내용에 추가  
+#### | : 첫번째 실행 결과를 두번째 입력으로 전달  
+    ls -l | less  
+    cat test | sort -r | grep abc
+
+#### ; : 여러 명령을 한 줄에서 실행
+
+
+<br>
+
+
+## 압축 파일 다루기
+
+#### 압축하기  
+    tar -cf name.tar a b c
+    tar -zcf name.tar.gz a b c    // z 는 용량 압축
+
+#### 압축풀기  
+    tar -xvf name.tar
+    tar -zxvf name.tar   // v 는 압축 푸는 과정 보여줌
+    
