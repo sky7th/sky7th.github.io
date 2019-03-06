@@ -2,7 +2,7 @@
 layout: post
 title:  "[boj] 1009 분산처리"
 subtitle:   "[boj] 1009 분산처리"
-categories: algorithm
+categories: algo
 tags: boj
 ---
 
