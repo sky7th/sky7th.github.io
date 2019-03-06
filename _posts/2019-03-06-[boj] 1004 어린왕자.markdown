@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "[boj] 1004 어린왕자"
+subtitle:   "[boj] 1004 어린왕자"
+categories: algorithm
+tags: boj
+---
+
+
+```cpp
+
+```

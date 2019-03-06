@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "[boj] 1026 보물"
+subtitle:   "[boj] 1026 보물"
+categories: algorithm
+tags: boj
+---
+
+
+```cpp
+
+```

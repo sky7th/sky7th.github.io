@@ -24,3 +24,14 @@ int main() {
 }
 ```
 
+### 중복, 비내림차순  
+```cpp
+if(k != 0) a = arr[k-1];
+for(int i = a; i < n; i++) {
+  arr[k] = i;
+  // isused[i] = 1;
+  func(arr, k+1);
+  // isused[i] = 0;
+}
+```
+

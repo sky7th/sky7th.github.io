@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "[boj] 2193 이친수"
+subtitle:   "[boj] 2193 이친수"
+categories: algorithm
+tags: boj
+---
+
+
+```cpp
+
+```
