@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "[Linux]"
-subtitle:   "[Linux]"
+title:  "[Linux] 기초"
+subtitle:   "[Linux] 기초"
 categories: dev
 tags: linux
 ---
+시스템콜, 사용자모드와 커널모드, 멀티 태스킹, 멀티 프로세싱, 멀티 프로그래밍
 
 ### GPL  
 > GPL 이 적용된 SW를 이용해 개량된 SW를 개발했을 경우, 개발한 SW 소스코드 역시 공개해야 한다.
