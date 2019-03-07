@@ -107,3 +107,10 @@ tags: linux
     tar -xvf name.tar
     tar -zxvf name.tar   // v 는 압축 푸는 과정 보여줌
     
+
+#### wget : 웹 상 특정 파일 다운로드 
+
+#### 링크 파일  
+    ln -s test1.txt test1.ln  // Symbolic Link
+    ln test1.txt testln.txt   // Hard Link
+
