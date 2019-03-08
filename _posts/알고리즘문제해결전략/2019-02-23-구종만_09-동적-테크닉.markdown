@@ -9,7 +9,7 @@ tags: jongman
 ## 18.5 문제: 조세푸스 문제 (하)  
 
 ```cpp
-void josephus(int n, int k) {
+void josephus(int n, int k) { 
   list<int> survivors;
   for(int i = 1; i <= n) survivors.push_back[i];
   list<int>::iterator kill = survivors.begin();

@@ -6,7 +6,88 @@ categories: algo
 tags: ds
 ---
 
+## 스택 
 
 ```cpp
+#include <stdio.h>
 
+#define MAX_N 100
+
+int top;
+int stack[MAX_N];
+
+void stackInit()
+{
+  top = 0;
+}
+
+int stackIsEmpty()
+{
+  return (top == 0);
+}
+
+int stackIsFull()
+{
+  return (top == MAX_N);
+}
+
+int stackPush(int value)
+{
+  if (stackIsFull())
+  {
+    printf("stack overflow!");
+    return 0;
+  }
+  stack[top] = value;
+  top++;
+
+  return 1;
+}
+
+int stackPop(int *value)
+{
+  if (stackIsEmpty())
+  {
+    printf("stack is empty!");
+    return 0;
+  }
+  top--;
+  *value = stack[top];
+
+  return 1;
+}
+
+int main()
+{
+
+}
+```
+
+## 큐
+
+```cpp
+#include <stdio.h>
+
+#define MAX_N 100
+
+int front;
+int rear;
+int queue[MAX_N];
+
+void queueInit()
+{
+  front = 0;
+  rear = 0;
+}
+
+int queueIsEmpty()
+{
+  return (front == rear);
+}
+
+int queueIsFull()
+{
+  if ((rear + 1) % MAX_N == front) return 1;
+  else return 0;
+}
 ```
