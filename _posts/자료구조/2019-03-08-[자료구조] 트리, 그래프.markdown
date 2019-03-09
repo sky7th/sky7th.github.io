@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "[자료구조] Tree, Graph"
+subtitle:   "[자료구조] Tree, Graph"
+categories: algo
+tags: ds
+---
+
+
+## Tree  
+```cpp
+#include <stdio.h>
+
+#define MAX_NODE_NUM 10000
+#define MAX_CHILD_NUM 2
+
+typedef struct {
+  int parent;
+  int child[MAX_CHILD_NUM];
+} TreeNode;
+TreeNode tree[MAX_NODE_NUM];
+int nodeNum;
+int edgeNum;
+int root;
+
+void initTree(void)
+{
+  for (int i = 1; i <= nodeNum; i++) {
+    tree[i].parent = -1;
+    for (int j = 0; j < MAX_CHILD_NUM; j++)
+      tree[i].child[j] = -1;
+  }
+}
+
+void addChild(int parent, int child)
+{
+  int i;
+  for (int i = 0; i < MAX_CHILD_NUM; i++) {
+    if (tree[parent].child[i] == -1)
+      break;
+  }
+  tree[parent].child[i]
+}
+```

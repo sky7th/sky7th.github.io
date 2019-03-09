@@ -1,0 +1,128 @@
+---
+layout: post
+title:  "[Linux] 기초"
+subtitle:   "[Linux] 기초"
+categories: dev
+tags: linux
+---
+시스템콜, 사용자모드와 커널모드, 멀티 태스킹, 멀티 프로세싱, 멀티 프로그래밍
+
+### GPL  
+> GPL 이 적용된 SW를 이용해 개량된 SW를 개발했을 경우, 개발한 SW 소스코드 역시 공개해야 한다.
+
+### Apache 라이선스  
+> 원작자에 대한 예의
+
+### MIT 라이선스  
+> 라이선스가 없는거나 마찬가지
+
+
+### 가상 환경 설치  
+
+    Virtual Box 설치 (oracle)  
+    Ubuntu Server 다운로드  
+-----
+
+
+    ~$  : 일반 유저
+    ~#  : 관리자 계정
+
+    sudo su - root : 관리자 계정으로 바꿈
+
+
+### 리눅스 파일 시스템  
+
+> 설치된 프로그램(usr/)의 설정(etc/) 그리고 프로그램이 만드는 값들(var/)
+
+> bin/ 은 모든 계정에서 쓰는 실행 파일, sbin/ 은 어드민 계정 실행 파일 두는 곳
+
+> tmp/ 운영체제든 프로그램 이든 임시로 데이터를 풀었다 삭제했다가 하는 곳
+
+> sys/ 시스템에 대한 설정들을 두는 곳
+
+
+
+#### mkdir : 디렉토리 생성  
+> 
+#### rmdir : 디렉토리 삭제  
+>
+#### touch : 빈 파일 생성  
+
+#### mv : 이름 바꾸기
+
+#### rm : 삭제  
+    rm -r    rm -ri  
+
+#### cp : 복사  
+
+------
+
+#### 에디터  
+    vi
+    nano
+
+## 유용한 명령들
+
+#### find  
+    find ./ -name *.java  
+    find . -name *.java -size +1c
+
+#### cat : 문서 보기
+
+#### head : 앞에만 보기  
+    head -n2 hello.java
+
+#### grep : 원하는 글자를 파일 내에서 찾음  
+    grep "class " hello.java
+    grep -i "class " hello.java
+
+
+#### cmp : 파일 비교  
+#### diff : 다른 곳 알려줌
+#### file : 어떤 파일인지 힌트 줌
+
+#### history : 내가 실행했던 명령어 확인 (!숫자 로 실행)
+
+#### echo : 단순 출력  
+
+#### > : 기존에 있는 내용 지우고 다시 만듬  
+#### >> : 기존에 있는 내용에 추가  
+#### | : 첫번째 실행 결과를 두번째 입력으로 전달  
+    ls -l | less  
+    cat test | sort -r | grep abc
+
+#### ; : 여러 명령을 한 줄에서 실행
+
+
+<br>
+
+
+## 압축 파일 다루기
+
+#### 압축하기  
+    tar -cf name.tar a b c
+    tar -zcf name.tar.gz a b c    // z 는 용량 압축
+
+#### 압축풀기  
+    tar -xvf name.tar
+    tar -zxvf name.tar   // v 는 압축 푸는 과정 보여줌
+    
+
+#### wget : 웹 상 특정 파일 다운로드 
+
+
+
+## 링크 파일  
+    ln -s test1.txt test1.ln  // Symbolic Link
+    ln test1.txt testln.txt   // Hard Link
+
+### echo $PATH (환경변수)
+> 내장 경로에 없으면 이 안에 있는 경로를 찾아본다.
+
+### 링크파일을 이용한 실행파일 리졸빙
+- 나혼자 쓰는 방법
+- 사용자들과 같이 쓰는 방법
+
+## 사용자 
+
+
