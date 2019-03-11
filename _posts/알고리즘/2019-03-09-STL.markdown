@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[boj] 2193 이친수"
-subtitle:   "[boj] 2193 이친수"
+title:  "[알고리즘] STL"
+subtitle:   "[알고리즘] STL"
 categories: algo
 tags: algorithm
 ---
