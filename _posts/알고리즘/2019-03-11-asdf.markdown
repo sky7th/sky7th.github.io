@@ -35,3 +35,19 @@ MAX(d[i-1][j], d[i-1][j-w[i]])
 ``` 
 
 
+## 와일드카드 
+
+```cpp
+
+bool matchMemorized(int w, int s) {
+    int& ret = cache[w][s];
+    if(ret != -1) return ret;
+    if(w < W.size() && s < S.size() && (W[w] == '?' || W[w] == S[s]))
+        return ret = matchMemorized(w+1, s+1);
+    if(W[w] == '*')
+        if(matchMemorized(w+1, s) || 
+            (s < S.size() && matchMemorized(w, s+1)))
+        return ret = 1;
+}
+```
+
