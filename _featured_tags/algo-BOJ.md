@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: BOJ
 slug: boj
 category: algo

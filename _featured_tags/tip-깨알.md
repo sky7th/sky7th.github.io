@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: 깨알
 slug: extra
 category: tip

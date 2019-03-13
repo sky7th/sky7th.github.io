@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: 북마크
 slug: bookmark
 category: tip

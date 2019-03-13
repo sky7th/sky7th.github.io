@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: 자료구조
 slug: ds
 category: algo
