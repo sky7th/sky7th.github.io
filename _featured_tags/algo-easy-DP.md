@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: DP
 slug: dp
 category: easy

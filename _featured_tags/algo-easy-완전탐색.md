@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: 완전 탐색
 slug: all
 category: easy

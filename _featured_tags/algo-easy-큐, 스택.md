@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: 큐, 스택
 slug: qs
 category: easy
