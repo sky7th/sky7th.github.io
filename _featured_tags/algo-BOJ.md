@@ -3,6 +3,6 @@ layout: list
 title: BOJ
 slug: boj
 category: algo
-menu: true
+menu: false
 order: 1
 ---
