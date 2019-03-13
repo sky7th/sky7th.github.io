@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: 완전탐색
+title: 완전 탐색
 slug: all
 category: easy
 menu: false
