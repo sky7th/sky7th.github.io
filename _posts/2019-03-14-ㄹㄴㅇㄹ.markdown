@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "test"
+subtitle:   "test"
+categories: easy
+tags: all
+---
+
+완전탐색
