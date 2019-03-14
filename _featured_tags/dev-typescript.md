@@ -1,5 +1,5 @@
 ---
-layout: tag-blog
+layout: list
 title: TypeScript
 slug: typescript
 category: dev

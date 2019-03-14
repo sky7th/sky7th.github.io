@@ -1,0 +1,270 @@
+---
+layout: post
+title:  "[알고리즘] 냅색"
+subtitle:   "[알고리즘] 냅색"
+categories: algo
+tags: easy
+---
+
+<details>
+<summary> 1로 만들기 - 1463</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int d[1000005];
+int n;
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin >> n;
+    d[1] = 0;
+    for (int i = 0; i <= n; i++) {
+        d[i] = d[i-1]+1;
+        if (i%2 == 0) d[i] = min(d[i], d[i/2]+1);
+        if (i%3 == 0) d[i] = min(d[i], d[i/3]+1);
+    }
+    cout << d[n];
+}
+```
+
+</div>
+</details>
+
+
+<details>
+<summary> 이친수 - 2193</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    long long D[100][2];
+    int N;
+    cin >> N;
+    D[1][0] = 0;
+    D[1][1] = 1;
+    for (int i = 2; i <= N; i++) {
+        D[i][0] = D[i-1][0] + D[i-1][1];
+        D[i][1] = D[i-1][0];
+    }
+    cout << D[N][0] + D[N][1];
+
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 스티커 - 9465</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int D[100000][2];
+int sticker[100000][2];
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int T;
+    cin >> T;
+    while (T--) {
+        int N;
+        cin >> N;
+        for (int i = 0; i < N; i++)
+            cin >> sticker[i][0];
+        for (int i = 0; i < N; i++)
+            cin >> sticker[i][1];
+        D[0][0] = sticker[0][0];
+        D[0][1] = sticker[0][1];
+        for (int i = 0; i < N; i++) {
+            D[i][0] = max(D[i-1][1] + sticker[i][0], D[i-1][0]);
+            D[i][1] = max(D[i-1][0] + sticker[i][1], D[i-1][1]);
+        }
+        cout << max(D[N-1][0], D[N-1][1]);
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 동전2 - 2294</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int coin[101];
+int D[10001];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n, k;
+    for (int i = 0; i <= k; i++)
+        D[i] = 0x7ffffff;
+    for (int i = 0; i < n; i++)
+        cin >> coin[i];
+    for (int i = 0; i < n; i++) {
+        if (coin[i] > k)
+            continue;
+        D[coin[i]] = 1;
+        for (int j = coin[i]+1; j <= k; j++) 
+            D[j] = min(D[j], D[j-coin[i]] + 1);
+    }
+    if (D[k] >= 0x7ffffff)
+        D[k] = -1;
+    cout << D[k];
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 제곱수의 합 - 1699</summary>
+<div markdown="1">
+
+<br>
+1을 빼야하는 이유 !
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int d[100001];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n; cin >> n;
+    for (int i = 0; i <= n; i++)
+        d[i] = i;
+    for (int i = 2; i <= n; i++)
+        for (int j = 2; j*j <= i; j++)
+            d[i] = min(d[i], d[i - j*j]+1);
+    cout << d[n];
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 붕어빵 판매하기 - 11052</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int P[1001];
+int D[1001];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int N; cin >> N;
+    for (int i = 0; i <= N; i++)
+        cin >> P[i];
+    D[1] = P[1];
+    for (int i = 2; i <= N; i++) {
+        D[i] = P[i];
+        for (int j = 1; j < i-1; j++)
+            D[i] = max(D[i], D[j] + D[i-j]);
+    }
+    cout << D[N];
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 쉬운 계단 수 - 10844</summary>
+<div markdown="1">
+
+<br>
+1234345 65454321212 ...
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int D[101][11];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n; cin >> n;
+    for (int i = 1; i <= 9; i++)
+        D[1][i] = 1;
+    for (int i = 2; i <= n; i++) {
+        D[i][0] = D[i-1][1];
+        for (int j = 1; j <= 9; j++)
+            D[i][j] = (D[i-1][j-1] + D[i-1][j+1]) % 1000000000;
+    }
+    long long sum = 0;
+    for (int i = 0; i <= 9; i++)
+        sum += D[n][i];
+    cout << sum;
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 오르막 수 - 11057</summary>
+<div markdown="1">
+
+<br>
+
+D[i][j] 은 i자리 수에서 1의 자리가 j인 오르막 수의 갯수
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define MOD 10007
+int D[1006][10];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int N; cin >> N;
+    for (int i = 0; i < 10; i++)
+        D[1][i] = 1;
+    for (int i = 2; i < N; i++)
+        for (int j = 0; j < 10; j++)
+            for (int k = 0; k <= j; k++)
+                D[i][j] = (D[i][j] + D[i-1][k]) % MOD;
+    int ans = 0;
+    for (int i = 0; i < 10; i++)
+        ans = (ans + D[N][i]) % MOD;
+    cout << ans;
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 붕어빵 판매하기 - 11052</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+
+}
+```
+
+</div>
+</details>
