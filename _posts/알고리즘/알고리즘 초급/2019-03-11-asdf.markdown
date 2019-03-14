@@ -250,6 +250,44 @@ int main() {
 </div>
 </details>
 
+
+<details>
+<summary> 평범한 배낭 - 12865 </summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int w[101];
+int v[101];
+int D[101][100001];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int N, K; cin >> N >> K;
+    for (int i = 1; i <= N; i++)
+        cin >> w[i] >> v[i];
+    for (int i = 0; i < N; i++)
+        D[i][0] = 0;
+    for (int i = 0; i < K; i++)
+        D[0][i] = 0;
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= K; j++) {
+            if (w[i] <= j) {
+                int free_weight = j - w[i];
+                d[i][j] = max(d[i-1][j], d[i-1][free_weight] + v[i]);
+            }
+            else 
+                d[i][j] = d[i-1][j];
+        }
+    cout << d[N][K];
+}
+```
+
+</div>
+</details>
+
+
 <details>
 <summary> 붕어빵 판매하기 - 11052</summary>
 <div markdown="1">
