@@ -289,7 +289,7 @@ int main() {
 
 
 <details>
-<summary> 붕어빵 판매하기 - 11052</summary>
+<summary> 문자열 판별 - 16500</summary>
 <div markdown="1">
 
 ```cpp
@@ -301,6 +301,38 @@ int main() {
     cin.tie(0);
 
 
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary> 가장 큰 증가 부분 수열 - 11055</summary>
+<div markdown="1">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int D[1005];
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int A[1005];
+    int N; cin >> N;
+    for (int i = 0; i < N; i++)
+        cin >> A[i];
+    D[0] = A[0];
+    int mx = D[0];
+    for (int i = 1; i < N; i++) {
+        D[i] = A[i];
+        for (int j = 0; j < i; j++) {
+            if (A[j] < A[i])
+                D[i] = max(D[i], D[j] + A[i]);
+        }
+        mx = max(mx, D[i]);
+    }
+    cout << mx;
 }
 ```
 
