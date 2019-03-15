@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[알고리즘] 냅색"
-subtitle:   "[알고리즘] 냅색"
+title:  "[알고리즘 초급] DP"
+subtitle:   "[알고리즘 초급] DP"
 categories: algo
 tags: easy
 ---
@@ -295,12 +295,34 @@ int main() {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
+int SL, N, AL[100];
+char S[101], A[100][101], D[101];
+bool ans(int pos) {
+    char &ret = D[pos];
+    if (ret != -1) return ret;
+    if (pos == SL) return ret = 1;
+    ret = 0;
+    for (int i = 0; i < N; i++) {
+        if (SL < pos + AL[i]) continue;
+        bool flag = true;
+        for (int j = 0; j < AL[i]; j++)
+            if (S[pos+j] != A[i][j])
+                flag = false;
+        if(flag) ret |= ans(pos + AL[i]);
+    }
+    return ret;
+}
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-
-
+    cin >> S >> N;
+    SL = strlen(S);
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+        AL = strlen(A[i]);
+    }
+    memset(D, -1, sizeof(D));
+    cout << ans(0);
 }
 ```
 

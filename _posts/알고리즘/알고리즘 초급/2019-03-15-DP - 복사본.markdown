@@ -1,0 +1,92 @@
+---
+layout: post
+title:  "[알고리즘 초급] BFS"
+subtitle:   "[알고리즘 초급] BFS"
+categories: algo
+tags: easy
+---
+
+<details>
+<summary> </summary>
+<div markdown="1">   
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+}
+```  
+</div>
+</details>
+
+<details>
+<summary> </summary>
+<div markdown="1">   
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+}
+```  
+</div>
+</details>
+
+<details>
+<summary> </summary>
+<div markdown="1">   
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+}
+```  
+</div>
+</details>
+
+<details>
+<summary> </summary>
+<div markdown="1">   
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+}
+```  
+</div>
+</details>
+
+<details>
+<summary> </summary>
+<div markdown="1">   
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+}
+```  
+</div>
+</details>
