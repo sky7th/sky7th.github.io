@@ -17,7 +17,12 @@ int RGB(int pos, int prev = 3) {
     if (pos == N) return ret = 0;
     ret = INF;
     for (int i = 0; i < 3; i++)
-        if (prev != i) ret = min(ret, RGB(pos+1, i) + cost[pos][i]);
+        if (prev != i) 
+            ret = min(ret, RGB(pos+1, i) + cost[pos][i]);
+     // if (prev != i && ret > RGB(pos+1, i) + cost[pos][i]) {
+     //     ret = RGB(pos+1, i) + cost[pos][i];
+     //     choice[pos][prev] = i;
+        }
     return ret;
 }
 // 최소 비용의 건물 색상 배치 출력
