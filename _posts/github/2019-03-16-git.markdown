@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "[Git] 정리"
+subtitle:   "[Git] 정리"
+categories: dev
+tags: git
+---
+
+### 새로운 저장소 만들기  
+```git init```
+
+### 저장소 받아오기  
+```git clone /로컬/저장소/경로 or 주소```
+
+### 작업의 흐름  
+첫번째 나무 => 작업 디렉토리 (실제 파일)  
+두번째 나무 => 인덱스 (준비 영역)  
+세번째 나무 => HEAD (최종 확정본)  
+
+### 추가와 확정 (commit)  
+1. 인덱스에 추가
+```git add <파일 이름>```  
+```git add *```  
+<br>
+2. 변경 내용 확정  
+```git commit -m "설명"```  
+<br>  
+3. 변경 내용 발행  
+```git push origin master```  
+```다른 가지를 발행하려면 master를 원하는 가지 이름으로 변경```
+
+4. 만약 clone 한게 아니라면  
+```git remote add origin <원격 서버 주소>```
+
