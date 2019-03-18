@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[알고리즘 초급] BFS"
-subtitle:   "[알고리즘 초급] BFS"
+title:  "[알고리즘 초급] DP"
+subtitle:   "[알고리즘 초급] DP"
 categories: algo
 tags: easy
 ---

@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "[web] Servlet"
+subtitle:   "[web] Servlet"
+categories: dev
+tags: web
+---
+
+### Servlet 이란?
+
+- 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할  
+- WAS 에 동작하는 Java 클래스
+- HttpServlet 클래스를 상속받아야 함
+- JSP, Servlet 을 조화롭게 사용해야 최상의 결과 도출 
+- 화면(HTML)은 JSP로 표현, 복잡한 프로그래밍은 Servlet 으로 구현
+
+### 생명주기
+
+- LifecycleServlet
+- init
+- service
+- destroy : 내용 고치면 호출, 다시 처음으로
+
+### 요청과 응답  
+- HttpServletRequest : 요청 시 모든 정보들을 담음, Body 의 Stream 을 읽어 들이는 메소드를 가지고 있음
+- HttpServletResponse : content type, 응답코드, 응답 메시지 들을 전송
+
+- WAS 는 웹 브라우저로 부터 Servlet 요청을 받으면
+  - 요청 시 가지고 있는 정보를 HttpServletRequest 객체를 생성 후 저장
+  - 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
+  - 생성된 두 객체를 Servlet 에게 전달
+
