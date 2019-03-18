@@ -30,3 +30,33 @@ tags: web
   - 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
   - 생성된 두 객체를 Servlet 에게 전달
 
+#### 요청이 들어 왔을 때 들고 들어온 헤더 값 출력해보기
+
+```java
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    out.println("<html>");
+    out.println("<head><title>form</title></head>");
+    out.println("<body>");
+
+    Enumeration<String> headerNames = request.getHeaderNames();
+    while(headerNames.hasMoreElements()) {
+        String headerName = headerNames.nextElement();
+        String headerValue = request.getHeader(headerName);
+        out.println(headerName + " : " + headerValue + " <br> ");
+    }		
+    
+    out.println("</body>");
+    out.println("</html>");
+}
+```
+
+
+
+### 파라미터 읽어 들이기
+```java
+String name = request.getParameter("name");
+String age = request.getParameter("age");
+```
+
