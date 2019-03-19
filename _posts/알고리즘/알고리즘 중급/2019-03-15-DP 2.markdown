@@ -203,17 +203,35 @@ int main() {
 </details>
 
 <details>
-<summary> </summary>
+<summary> 숫자 맞추기 - 2494</summary>
 <div markdown="1">   
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+int N, A[10000], B[10000], D[10000][10];
+
+int digits(int pos, int offset) {
+    if (pos == N) return 0;
+    int &ret = D[pos][offset];
+    if (ret != -1) return ret;
+
+    int actual = (A[pos] + offset) % 10;
+    ret = 1000000000;
+    for (int i=0; i<10; i++) {
+        if ((actual + i)%10 == B[pos]) {
+            ret = min(ret, digits(pos+1, (offset+i)%10) + i);
+            ret = min(ret, digits(pos+1, offset) + 10-i);
+            break;
+        }
+    }
+    return ret;
+}
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-
+    
 }
 ```  
 </div>
