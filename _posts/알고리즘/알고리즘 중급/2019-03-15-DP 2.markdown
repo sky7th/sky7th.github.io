@@ -220,12 +220,32 @@ int digits(int pos, int offset) {
     ret = 1000000000;
     for (int i=0; i<10; i++) {
         if ((actual + i)%10 == B[pos]) {
-            ret = min(ret, digits(pos+1, (offset+i)%10) + i);
-            ret = min(ret, digits(pos+1, offset) + 10-i);
+            ret = min(ret, digits(pos+1, (offset+i)%10) + i);  // left
+            ret = min(ret, digits(pos+1, offset) + 10-i);      // right
             break;
         }
     }
     return ret;
+}
+
+int tracker(int pos, int offset) {
+    if(pos == N) return;
+    int actual = (A[pos] + offset) % 10;
+    for (int i=0; i<10; i++) {
+        if ((actual+i) % 10 == B[pos]) {
+            int left = digits(pos+1, (offset+i)%10 + i);
+            int right = digits(pos+1, offset) + 10-i;
+        }
+        if (left <= right) {
+            cout << pos+1 << i << '\n';
+            track(pos+1, (offset+i)%10);
+        }
+        else {
+            cout << pos+1 << 10-i << '\n';
+            track(pos+1, offset);
+        }
+        return;
+    }
 }
 
 int main() {
